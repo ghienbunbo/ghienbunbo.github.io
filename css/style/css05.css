@@ -1,0 +1,60 @@
+#banner{
+    width:700;
+    height:600;
+    background-color: lightcoral;
+    text-align: center;
+    text-transform: uppercase;
+    margin:50px;
+    border:5px ;
+    padding: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    animation-name: doimau;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#tenbanner{
+    animation-name: chu_to_nho;
+    color:blue;
+}
+
+@keyframes doimau{
+    0% {background-color: lightcoral; font-size: 75%;}
+    25% {background-color: lightgreen;font-size: 100%;}
+    50% {background-color: yellow;font-size: 125%;}
+    75% {background-color: rgb(118, 103, 175);font-size: 150%;}
+    100% {background-color: royalblue;font-size: 175%;}
+}
+@keyframes chu_to_nho{
+    0% { font-size: 75%;}
+    25% {font-size: 100%;}
+    50% {font-size: 125%;}
+    75% {font-size: 150%;}
+    100% {font-size: 175%;}
+}
+
+@keyframes changeImage {
+    0% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    66.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.p1 {
+    animation-delay: 0s;
+}
+
+.p2 {
+    animation-delay: 4s;
+}
+
+.p3 {
+    animation-delay: 8s;
+}

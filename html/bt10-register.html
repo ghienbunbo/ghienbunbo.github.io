@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 10</title>
+</head>
+<body>
+    <div align="center">
+        <h3>BÀI KIỂM TRA CHƯƠNG 2</h3><br>
+        <b>Môn học: </b><i>Ứng dụng Web</i><br>
+        <b>Mã số sinh viên: </b><i>12345</i><br>
+        <b>Họ và tên: </b><i>Nguyễn Văn A</i>
+        <hr color="blue">
+        <a href="bt10-index.html">Trang chủ</a>
+        <a href="bt10-content.html">Nội dung môn học</a>
+        <a href="bt10-register.html">Đăng ký</a>
+    </div>
+    <div align="center">
+        <h3>ĐĂNG KÍ THAM GIA DIỄN ĐÀN</h3>
+        <form>
+            <table border="1" bgcolor="yellow" width="40%">
+                <tr>
+                    <td>Tên đăng nhập: </td>
+                    <td><input type="text" tabindex="1" placeholder="Nhập tên đăng nhập" required></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu:</td>
+                    <td><input type="password" required tabindex="2"></td>
+                </tr>
+                <tr>
+                    <td>Giới tính:</td>
+                    <td>
+                        <input type="radio" name="gt" value="Nam" tabindex="3" required>Nam
+                        <input type="radio" name="gt" value="Nữ" tabindex="4" required>Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh:</td>
+                    <td><input type="date" placeholder="dd/mm/yyyy" tabindex="5" min="1800-01-01" max="2025-01-01"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" tabindex="6" required></td>
+                </tr>
+                <tr>
+                    <td>Ngôn ngữ lập trình yêu thích nhất:</td>
+                    <td>
+                        <input type="text" list="language" tabindex="7" required>
+                        <datalist id="language">
+                            <option>C++</option>
+                            <option>C#</option>
+                            <option>PHP</option>
+                            <option>Java</option>
+                            <option>Python</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quy định khi tham gia diễn đàn:</td>
+                    <td>
+                        <textarea rows="4" cols="25" readonly>Bài viết phải nghiêm túc, không chứa quảng cáo, không có nội dung phản cảm</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">
+                            <img src="../image/Dang_ki.png" width="90px" height="25px" tabindex="8">
+                        </button>
+                        <button type="reset">
+                            <img src="../image/Huy.png" width="90px" height="25px" tabindex="9">
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

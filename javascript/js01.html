@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function YearOld(){
+            name=document.getElementById('name').value;
+            age=2024-document.getElementById('yob').value;
+            res=document.getElementById('result');
+            res.textContent = `Chào bạn ${name}!`
+            `Tuổi của bạn là ${age}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>Chương trình tính tuổi</h2>
+    <table border="1">
+        <tr>
+            <td>Nhập vào tên của bạn</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>Nhập vào năm sinh</td>
+            <td><input type="int" id="yob"></td>
+        </tr>
+    </table><br>
+    <button onclick="YearOld()">Tính tuổi</button>
+    <div id="result"></div>
+</body>
+</html>

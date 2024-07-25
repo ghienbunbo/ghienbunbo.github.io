@@ -1,0 +1,64 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Change Animation</title>
+    <style>
+        .image-container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            border: 5px solid #4CAF50;
+            border-radius: 15px;
+            overflow: hidden; /* Để ảnh không bị tràn ra ngoài */
+        }
+
+        .image-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Đảm bảo ảnh chiếm toàn bộ khung và giữ tỉ lệ */
+            opacity: 0;
+            animation: changeImage 12s infinite;
+        }
+
+        @keyframes changeImage {
+            0% {
+                opacity: 1;
+            }
+            33.33% {
+                opacity: 0;
+            }
+            66.66% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .image1 {
+            animation-delay: 0s;
+        }
+
+        .image2 {
+            animation-delay: 4s;
+        }
+
+        .image3 {
+            animation-delay: 8s;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://via.placeholder.com/400x300?text=Image+1" class="image1" alt="Image 1">
+        <img src="https://via.placeholder.com/400x300?text=Image+2" class="image2" alt="Image 2">
+        <img src="https://via.placeholder.com/400x300?text=Image+3" class="image3" alt="Image 3">
+    </div>
+</body>
+</html>
