@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin:0 auto;
+            width:300px;
+            border-collapse: collapse;
+        }
+        div:first-child{
+            font-size:125%;
+        }
+        div {
+            font-weight: bold;
+        }
+        td{
+            border:1px groove black ;
+            background-color: rgb(238, 238, 165);
+            padding:5px;
+        }
+        tr td:first-child{
+            width:100px;
+            font-size: 110%;
+        }
+        div div{
+            text-align: center;
+        }
+    </style>
+    <script src="js/js03.js"></script>
+</head>
+<body>
+    <div>
+        <div>Chương trình giải phương trình bậc 2</div>
+        <div>ax+bx+c</div>
+    </div>
+    
+    <form>
+        <table>
+            <tr>
+                <td>a=</td>
+                <td><input type="number" id="a" required></td>
+            </tr>
+            <tr>
+                <td>b=</td>
+                <td><input type="number" id="b" required></td>
+            </tr>
+            <tr>
+                <td>c=</td>
+                <td><input type="number" id="c" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" id="cal" onclick="ptbh()">Giải</button>
+                    <button type="reset"  id="del">Xoá</button>
+                </td>
+            </tr>
+        </table>
+        <div id="result"></div>
+    </form>   
+    
+</body>
+</html>

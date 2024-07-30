@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function NumberDay() {
+            const monthsWith31Days = [1, 3, 5, 7, 8, 10, 12];
+            const monthsWith30Days = [4, 6, 9, 11];
+
+            let month = parseInt(prompt("Nhập tháng"));
+            let year = parseInt(prompt("Nhập năm"));
+
+            if (isNaN(month) || isNaN(year) || month < 1 || month > 12) {
+                alert("Vui lòng nhập tháng và năm hợp lệ.");
+                return;
+            }
+
+            let daysInMonth;
+            if (month === 2) {
+                daysInMonth = (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) ? 29 : 28;
+            } else if (monthsWith31Days.includes(month)) {
+                daysInMonth = 31;
+            } else if (monthsWith30Days.includes(month)) {
+                daysInMonth = 30;
+            } else {
+                alert("Tháng không hợp lệ.");
+                return;
+            }
+
+            document.getElementById("dayinyear").innerHTML = "<b2>" + "Tháng " + month + " năm " + year + " có " + daysInMonth + " ngày" + "<b2>";
+        }
+
+        function getTenNgay(thu) {
+            const tenNgay = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
+            return tenNgay[thu];
+        }
+
+        function TimeNow() {
+            const now = new Date();
+
+            let nam = now.getFullYear();
+            let thang = now.getMonth() + 1;
+            if (thang <10) thang = '0'+thang;
+            let ngay = now.getDate();
+            if (ngay <10) ngay = '0'+ngay;
+            let gio = now.getHours();
+            if (gio <10) gio = '0'+gio;
+            let phut = now.getMinutes();
+            if (phut <10) phut = '0'+phut;
+            let giay = now.getSeconds();
+            if (giay <10) giay = '0'+giay;
+            let thu = now.getDay();
+
+            document.getElementById('now').innerHTML = `Hôm nay, ${getTenNgay(thu)} ngày ${ngay}/${thang}/${nam}<br> ${gio}:${phut}:${giay}`;
+        }
+    </script>
+    <style>
+        body div {
+            font-size: 110%;
+            font-weight: bold;
+        }
+        body div:first-child{
+            font-size: 125%;
+        }
+    </style>
+</head>
+<body onload="NumberDay()">
+    <div id="dayinyear"></div>
+    <div id="now"> </div>
+    <button type="button" onclick="TimeNow()"> Xem ngày giờ</button>
+    
+</body>
+</html>

@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
+        function tinhTuoi(){
+            var ten = document.getElementById('name').value;
+            var date = document.getElementById('namsinh').value;
+
+            var namnay = new Date().getFullYear();
+            var tuoi = namnay-date;
+            
+            document.getElementById('result').innerHTML = "Chào bạn " + ten + "!<br>Tuổi của bạn là " + tuoi;
+        }
     </script>
+    <style>
+        table{
+            border:1px solid
+        }
+    </style>
 </head>
 <body>
     <h2>Chương trình tính tuổi</h2>
-    <table border="1">
+    <table>
         <tr>
             <td>Nhập vào tên của bạn</td>
             <td><input type="text" id="name"></td>
         </tr>
         <tr>
             <td>Nhập vào năm sinh</td>
-            <td><input type="int" id="yob"></td>
+            <td><input type="int" id="namsinh"></td>
         </tr>
     </table><br>
-    <button onclick="YearOld()">Tính tuổi</button>
+    <button onclick="tinhTuoi()">Tính tuổi</button>
     <div id="result"></div>
 </body>
 </html>
