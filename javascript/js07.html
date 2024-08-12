@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baiso7</title>
+    <script src="js/js07.js" defer></script>
+</head>
+<body>
+    <h3>Chương trình xử lí chuỗi</h3>
+    <table>
+        <tr>
+            <td>Chuỗi S1:</td>
+            <td><input type="text" class="s1"></td>
+        </tr>
+        <tr>
+            <td>Chuỗi S2:</td>
+            <td><input type="text" class="s2"></td>
+        </tr>
+        <tr>
+            <td>Chuỗi S3:</td>
+            <td><input type="text" class="s3"></td>
+        </tr>
+        <tr>
+            <td>Vị trí chèn:</td>
+            <td><input type="number" class="index"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type='button' class="chuanhoa" onclick="chuanhoa()">Chuẩn hoá chuỗi</button>
+                <button type="button" onclick="daochuoi()">Đảo chuỗi</button>
+                <button type="button" onclick="khoiphuc()">Khôi phục</button>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" onclick="replace()">Thay thế S2 bằng S3</button>
+                <button type="button">Chèn S2 vào S1</button>
+                <button type="button">Xoá S2 trong S1</button>
+            </td>
+        </tr>
+    </table><br><br>
+    <div>
+        Nút Chuẩn hóa chuỗi: Xóa các khoảng trắng thừa đầu, cuối và giữa chuỗi, hoa các ký 
+        tự đầu từ: 
+    </div>
+    <div><br><br>
+        Nút Đảo chuỗi, cho phép đảo các từ trong chuỗi: 
+    </div>
+    <div><br><br>Nút Thay thế S2 bằng S3 trong s1: thay thế chuỗi S2 trong S1 bằng S3, không phân biệt chữ 
+        hoa, chữ thường:
+    </div>
+    <div><br><br>
+        Nút Chèn S2 vào S1: chèn chuỗi S2 vào S1 tại Vị trí chèn, có kiểm tra giá trị nhập hợp lệ: 
+    </div>
+    <div><br><br>
+        Nút Xóa S2 trong S1: xóa tất cả chuỗi S2 trong S1, không phân biệt chữ hoa, chữ thường 
+    </div>
+    <div><br><br>
+        Nút Khôi phục: trả chuỗi S1 về chuỗi gốc ban đầu 
+    </div>
+</body>
+</html>
