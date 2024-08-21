@@ -29,7 +29,7 @@
     display: absolute;
     height: max-content;
     display: flex;
-    border: 1px solid, blue;
+    border: 1px solid blue;
     z-index: -1;
 }
 @keyframes doimau {
