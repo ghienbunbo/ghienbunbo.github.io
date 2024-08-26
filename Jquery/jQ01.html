@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>jq01</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function addsubject(){
+            var s = $("#mon").val(); // Corrected selector and method
+            $("ul").append(`<li>${s}</li>`);
+        }
+    </script>
 </head>
 <body>
-
+    Tên môn học:
+    <input type="text" id="mon"><br>
+    <ul></ul>
+    <button type="button" id="add" onclick="addsubject()">Them mon hoc</button>
 </body>
 </html>

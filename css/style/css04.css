@@ -2,9 +2,8 @@ h3{
     text-align: center;
 }
 table, td, th {
-    border: 1px solid;
     border-collapse: collapse;
-    border-color: black;
+    border: 1px solid black;
     padding: 3px;
 }
 tr:nth-child(odd){

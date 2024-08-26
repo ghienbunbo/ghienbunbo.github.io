@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <style>
+        #banner{
+            background:linear-gradient(deepskyblue, dodgerblue,deepskyblue, dodgerblue,deepskyblue, dodgerblue);
+            display:flex;
+            justify-content: space-between;
+        }
+        #banner div{
+            padding:10px;
+        }
+        #tenbanner{
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 200%;
+        }
+        #tt{
+            color:white;
+            text-shadow:2px 2px 5px black;
+        }
+        #menu{
+            display:flex;
+            background-color: #21c287;
+            text-decoration: none;
+            justify-content: center;
+            list-style-type: none;
+            margin:2px;
+            padding:0
+        }
+        #menu li{
+            padding:10px;
+            margin-left: 10px;
+            background-color: #10704e;
+        }
+        #menu li a{
+            text-decoration: none;
+            color:white;
+            padding:10px;
+        }
+        #menu li a:hover{
+            color:yellow;
+        }
+        div form{
+            float:left;
+        }
+    </style>
+    <script>
+        function changecolor(){
+            document.getElementById('tenbanner').style.color = document.getElementById('color').value;
+        }
+        function sort_array(){
+            const n = document.getElementById('n').value;
+            const min = document.getElementById('min').value;
+            const max = document.getElementById('max').value;
+            let arr1;
+            let arr2;
+            if (max >= min) {
+                let i;
+                arr = [];
+                for (i = 0; i < n; i++) {
+                    arr[i] = Math.floor((Math.random() * 100) % (max - min)) + Number(min);
+                }
+                let s = "";
+                for (i = 0; i < n; i++) {
+                    s += arr[i] + ' ';
+                }
+                document.getElementById('s1').value = s;
+                arr1 = [];
+                arr2 = [];
+                for (const x in arr) {
+                    if (x % 2 === 0) arr1.append(x);
+                    else arr2.append(x);
+                }
+                arr1.sort(function (a, b) {
+                    return a - b
+                });
+                arr2.sort(function (a, b) {
+                    return a - b
+                });
+                let t = "";
+                for (const x in arr1) {
+                    t += x + ' ';
+                }
+                for (const x in arr2) {
+                    t += x + ' ';
+                }
+                document.getElementById('s2').value = t;
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="banner">
+    <div id="tenbanner">Bai thi ung dung web</div>
+    <div id="tt">MSSV:12345- Ho ten: Nguyen Van A</div>
+</div>
+<div>
+    <ul id="menu">
+        <li><a href="#">Trang chu</a></li>
+        <li><a href="#">Gioi thieu</a></li>
+        <li><a href="#">Dung</a></li>
+    </ul>
+</div>
+<div>
+    <form>
+        <fieldset>
+            <legend>Chon thao tac</legend>
+            Doi mau tieu de
+            <input type="color" id="color" onchange="changecolor()">
+            <br><br>
+            Hinh vuong
+            <input type="radio">
+            Hinh tron
+            <input type="radio">
+        </fieldset>
+        <fieldset>
+            <legend>Xu li mang</legend>
+            So phan tu
+            <input type="number" id="n">
+            So nho nhat
+            <input type="number" id="min">
+            So lon nhat
+            <input type="number" id="max"><br>
+            <button type ='button' onclick="sort_array()">Tao mang - Sap xep</button><br>
+            Mang ban dau<br>
+            <input type="text" id="s1"><br>
+            Mang sap xep le giam chan tang<br>
+            <input type="text" id="s2"><br>
+        </fieldset>
+    </form>
+    <div>
+
+    </div>
+</div>
+</body>
+</html>
